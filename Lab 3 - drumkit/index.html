@@ -1,14 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drumkit</title>
+    <title>Perkusja Online</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <audio src="./sounds/clap.wav" controls data-key="a" data-volume="40" id="s1"></audio>
-    <audio src="./sounds/kick.wav" controls data-key="s" id="s2"></audio>
-    <audio src="./sounds/hihat.wav" controls data-key="d" id="s3"></audio>
+    <h1>Perkusja Online</h1>
+    <div class="keys">
+        <button class="key" data-key="65">Boom </br> `A`</button>
+        <button class="key" data-key="83">Hihat </br>`S`</button>
+        <button class="key" data-key="68">Kick </br>`D`</button>
+        <button class="key" data-key="70">Metronome </br>`F`</button>
+        <button class="key" data-key="71">Openhat </br>`G`</button>
+        <button class="key" data-key="72">Ride </br>`H`</button>
+        <button class="key" data-key="74">Snare </br>`J`</button>
+        <button class="key" data-key="75">Tink </br>`K`</button>
+        <button class="key" data-key="76">Tom </br>`L`</button>
+    </div>
+    <div class="controls">
+        <button id="add-channel">Dodaj Kanał</button>
+        <button id="play-all">Odtwórz Wszystkie</button>
+        <label>
+            <input type="checkbox" id="loop"> Zapętlenie
+        </label>
+        <button id="metronome">Metronom</button>
+        <label>
+            BPM: <input type="number" id="bpm" value="60" min="20" max="300">
+        </label>
+    </div>
+    <div id="channels">
+        <div class="channel">
+            <label><input type="checkbox" id="channel-1" checked> Kanał 1</label>
+            <button id="record-channel-1" class="record">Nagraj Kanał 1</button>
+            <button id="play-channel-1" class="play">Odtwórz Kanał 1</button>
+        </div>
+        <div class="channel">
+            <label><input type="checkbox" id="channel-2" checked> Kanał 2</label>
+            <button id="record-channel-2" class="record">Nagraj Kanał 2</button>
+            <button id="play-channel-2" class="play">Odtwórz Kanał 2</button>
+        </div>
+        <div class="channel">
+            <label><input type="checkbox" id="channel-3" checked> Kanał 3</label>
+            <button id="record-channel-3" class="record">Nagraj Kanał 3</button>
+            <button id="play-channel-3" class="play">Odtwórz Kanał 3</button>
+        </div>
+        <div class="channel">
+            <label><input type="checkbox" id="channel-4" checked> Kanał 4</label>
+            <button id="record-channel-4" class="record">Nagraj Kanał 4</button>
+            <button id="play-channel-4" class="play">Odtwórz Kanał 4</button>
+        </div>
+    </div>
+    <audio data-key="65" src="sounds/boom.wav"></audio>
+    <audio data-key="83" src="sounds/clap.wav"></audio>
+    <audio data-key="68" src="sounds/hihat.wav"></audio>
+    <audio data-key="70" src="sounds/kick.wav"></audio>
+    <audio data-key="71" src="sounds/openhat.wav"></audio>
+    <audio data-key="72" src="sounds/ride.wav"></audio>
+    <audio data-key="74" src="sounds/snare.wav"></audio>
+    <audio data-key="75" src="sounds/tink.wav"></audio>
+    <audio data-key="76" src="sounds/tom.wav"></audio>
+    <audio id="metronome-sound" src="sounds/metronome.wav"></audio>
     <script src="main.js"></script>
 </body>
 </html>

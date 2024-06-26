@@ -1,0 +1,83 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.keys {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.key {
+    margin: 10px;
+    padding: 20px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.key:active {
+    background: #0056b3;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.controls button, .controls label {
+    margin: 5px;
+    padding: 10px;
+    background: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.controls button:active, .controls label:active {
+    background: #218838;
+}
+
+.controls input[type="number"] {
+    width: 60px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#channels {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.channel {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+}
+
+.channel label {
+    margin-right: 10px;
+}
+
+.channel button {
+    margin-right: 5px;
+}

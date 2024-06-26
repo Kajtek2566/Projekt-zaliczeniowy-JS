@@ -1,18 +1,28 @@
-const box = document.querySelector('.box')
+let slideIndex = 1;
+showSlides(slideIndex);
 
-// setTimeout(() => {
-//   box.style.transform = 'translateX(200px)'
-// }, 2_000)
-let position = 0
-const anim = () => {
-  box.style.transform = `translateX(${position}px)`
-  position++
-  setTimeout(anim, 16)
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
-// const animInterval = setInterval(anim, 16)
 
-anim()
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-// setTimeout(() => {
-//   clearInterval(animInterval)
-// }, 2_000)
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
