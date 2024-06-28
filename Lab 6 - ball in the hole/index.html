@@ -1,11 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kulka do dziury</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        #gameArea {
+            position: relative;
+            width: 100vw;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        .ball, .hole {
+            position: absolute;
+            border-radius: 50%;
+        }
+        .ball {
+            width: 30px;
+            height: 30px;
+            background-color: red;
+        }
+        .hole {
+            width: 50px;
+            height: 50px;
+            background-color: black;
+        }
+        #joystickContainer {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 150px;
+            background-color: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            touch-action: none;
+        }
+        #joystick {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
+    <div id="gameArea">
+        <div class="ball" id="ball"></div>
+        <div class="hole" id="hole"></div>
+        <div id="joystickContainer">
+            <div id="joystick"></div>
+        </div>
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

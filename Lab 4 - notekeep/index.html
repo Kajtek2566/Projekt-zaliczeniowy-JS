@@ -3,9 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Note Taking App</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Note Taking App</h1>
+    <div>
+        <input type="text" id="search" placeholder="Search notes...">
+    </div>
+    <div>
+        <h2>Create Note</h2>
+        <input type="text" id="title" placeholder="Title" required>
+        <textarea id="content" placeholder="Content" required></textarea>
+        <input type="color" id="color" value="#ffffff">
+        <label>
+            <input type="checkbox" id="pin"> Pin to top
+        </label>
+        <input type="datetime-local" id="reminder">
+        <input type="text" id="tags" placeholder="Tags (comma separated)">
+        <button onclick="createNote()">Create Note</button>
+    </div>
+    <div id="notes-container">
+        <h2>Notes</h2>
+        <!-- Notes will be displayed here -->
+    </div>
+
     <script src="main.js"></script>
 </body>
 </html>
